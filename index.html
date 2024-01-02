@@ -9,6 +9,59 @@
   <body>
     <div class="container">
       <div class="board"></div>
+      <div class="ui">
+        <div class="ui-tools">
+          <div class="color-tools">
+            <label>
+              <input type="radio" name="tool" data-tool="dropper">
+              <span class="checkmark">
+                <img src="svg/dropper.svg" alt="dropper">
+              </span>
+            </label>
+            <label>
+              <input type="radio" name="tool" data-tool="color">
+              <span class="checkmark">
+                <input type="color">
+                <img src="svg/palette.svg" alt="palette">
+              </span>
+            </label>
+            <label>
+              <input type="radio" name="tool" data-tool="rand-color">
+              <span class="checkmark">
+                <img src="svg/colors.svg" alt="rand-color">
+              </span>
+            </label>
+          </div>
+          <div class="pen-tools">
+            <label>
+              <input type="radio" name="tool" data-tool="paint-pour">
+              <span class="checkmark">
+                <img src="svg/paint-pour.svg" alt="paint-pour">
+              </span>
+            </label>
+            <label>
+              <input type="radio" name="tool" data-tool="eraser">
+              <span class="checkmark">
+                <img src="svg/eraser.svg" alt="eraser">
+              </span>
+            </label>
+            <label>
+              <input type="radio" name="tool" data-tool="pen" checked >
+              <span class="checkmark">
+                <img src="svg/pencil-02.svg" alt="pencil">
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="ui-options">
+          <div class="board-resolution">
+            
+          </div>
+          <div class="board-options">
+            
+          </div>
+        </div>
+      </div>
     </div>
     <script src="./app.js"></script>
   </body>

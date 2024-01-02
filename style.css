@@ -8,9 +8,6 @@ body{
   place-content: center;
   height: 100svh;
 }
-.container{
-
-}
 .board{
   width: 400px;
   height: 400px;
@@ -21,4 +18,51 @@ body{
 }
 .board-element{
   user-select: none;
+}
+.ui-tools{
+  display: flex;
+  outline: 2px black solid;
+}
+.color-tools,
+.pen-tools{
+  flex: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 25px calc(25px / 2);
+}
+
+label{
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  font-size: 25px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+input[type=color]{
+  width: 100%;
+  height: 100%;
+}
+.checkmark{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+}
+label input:checked ~ .checkmark{
+  outline: 2px black solid;
 }
