@@ -12,17 +12,13 @@
       <div class="ui">
         <div class="ui-tools">
           <div class="color-tools">
+            <label id="color-tool">
+              <input type="color" data-tool="color">
+            </label>
             <label>
               <input type="radio" name="tool" data-tool="dropper">
               <span class="checkmark">
                 <img src="svg/dropper.svg" alt="dropper">
-              </span>
-            </label>
-            <label>
-              <input type="radio" name="tool" data-tool="color">
-              <span class="checkmark">
-                <input type="color">
-                <img src="svg/palette.svg" alt="palette">
               </span>
             </label>
             <label>
@@ -55,10 +51,17 @@
         </div>
         <div class="ui-options">
           <div class="board-resolution">
-            
+            <input type="range" id="board-grid" min="8" max="50">
           </div>
           <div class="board-options">
-            
+            <div class="board-options-wrapper">
+              <div id="clear-all">
+                <img src="svg/trash-03.svg" alt="clear-all">
+              </div>
+              <div id="save">
+                <img src="svg/save-01.svg" alt="save">
+              </div>
+            </div>
           </div>
         </div>
       </div>

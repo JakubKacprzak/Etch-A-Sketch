@@ -13,13 +13,13 @@ body{
   height: 400px;
   outline: 2px black solid;
   display: grid;
-  grid-template-rows: repeat(16, 1fr);
-  grid-template-columns: repeat(16, 1fr);
 }
 .board-element{
   user-select: none;
+  border: 1px solid rgba(237, 237, 237, 0.447);
 }
-.ui-tools{
+.ui-tools,
+.ui-options{
   display: flex;
   outline: 2px black solid;
 }
@@ -27,10 +27,16 @@ body{
 .pen-tools{
   flex: auto;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 25px;
-  padding: 25px calc(25px / 2);
+  padding: calc(25px / 2) 25px;
+}
+
+.color-tools{
+  justify-content: flex-start;
+}
+.pen-tools{
+  justify-content: flex-end;
 }
 
 label{
@@ -52,6 +58,25 @@ label input{
   height: 0;
   width: 0;
 }
+#color-tool input{
+  position: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  opacity: 1;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  border: 1px solid black;
+}
+#color-tool input::-webkit-color-swatch{
+  border: none;
+}
+#color-tool input::-webkit-color-swatch-wrapper{
+  padding: 0;
+}
 input[type=color]{
   width: 100%;
   height: 100%;
@@ -62,7 +87,34 @@ input[type=color]{
   left: 0;
   width: 25px;
   height: 25px;
+  border-radius: 4px;
+  transition: all 100ms;
 }
 label input:checked ~ .checkmark{
   outline: 2px black solid;
+  outline-offset: 2px;
+}
+.board-resolution{
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 13px 25px;
+}
+.board-options{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  padding: calc(25px / 2) 25px;
+}
+.board-options-wrapper{
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+  height: 25px;
+}
+.board-options-wrapper img{
+  cursor: pointer;
 }
