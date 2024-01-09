@@ -8,10 +8,12 @@ body{
   place-content: center;
   height: 100svh;
 }
+.container{
+  outline: 2px black solid;
+}
 .board{
   width: 400px;
   height: 400px;
-  outline: 2px black solid;
   display: grid;
 }
 .board-element{
@@ -21,7 +23,7 @@ body{
 .ui-tools,
 .ui-options{
   display: flex;
-  outline: 2px black solid;
+  border-top: 2px solid black;
 }
 .color-tools,
 .pen-tools{
@@ -117,4 +119,31 @@ label input:checked ~ .checkmark{
 }
 .board-options-wrapper img{
   cursor: pointer;
+}
+#board-grid{
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  appearance: none;
+  width: 125px;
+  height: 2px;
+  background-color: black;
+  border: none;  
+  outline: none;
+  cursor: pointer;
+}
+#board-grid::-webkit-slider-thumb{
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: black;
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+#board-grid::-moz-range-thumb{
+  background-color: black;
+  width: 16px;
+  height: 16px;
+  aspect-ratio: 1;
+  border-radius: 50%;
 }

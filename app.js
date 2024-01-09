@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   boardGrid.addEventListener('input', createBoard);
   clear.addEventListener('click', clearBoard);
   colorPick.addEventListener('input', chooseColor);
-  saveButton.addEventListener('click', saveBoardAsImage)
+  // saveButton.addEventListener('click', saveBoardAsImage)
 
   boardGrid.value = boardSize;
 
